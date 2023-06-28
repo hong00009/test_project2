@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>index</h1>
+
+<table class="table table-dark table-striped-columns table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>detail</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for poost in poosts %}
+        <tr>
+            <td>{{poost.id}}</td>
+            <td>{{poost.title}}</td>
+            <td><a href="/poosts/{{poost.id}}/">detail</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

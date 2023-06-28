@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+        <img src="https://picsum.photos/200/200" class="card-img-top" alt="..."  style="width: 12rem;">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{poost.title}}</h5>
+      <p class="card-text">{{poost.content}}</p>
+      <a href="/poosts/edit/{{poost.id}}/" class="btn btn-warning">Edit</a>
+      <a href="/poosts/delete/{{poost.id}}/" class="btn btn-danger">Delete</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      2 days ago
+    </div>
+</div>
+{% endblock %}

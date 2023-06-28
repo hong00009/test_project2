@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>edit</h1>
+
+<form action="/poosts/update/{{poost.id}}/" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" value="{{poost.title}}">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" id="content" rows="3" name="content">{{poost.content}}</textarea>
+      </div>
+    <input type="submit" value="수정" class="btn btn-primary">
+</form>
+
+{% endblock %}
