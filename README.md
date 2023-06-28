@@ -22,7 +22,7 @@
 
 프로젝트 최상위 폴더에 `.gitignore` 파일 생성, 사이트에서 windows django python visualstudiocode 네개 제외설정한 것 저장
 
-앱생성 `django-admin startapp <app_name>
+앱생성 `django-admin startapp <app_name>`
 
 `settings.py`의 `INSTALLED_APPS` 안에 방금 만든 '<app_name>', 기재
 
@@ -116,10 +116,10 @@ urlpatterns = [
 from .models import <MyClassName>
 
 def index(request):
-    variable_c = <MyClassName>.objects.all()
+    var0 = <MyClassName>.objects.all()
 
     context = {
-        '<app_name?>' : variable_c,
+        'var0' : var0,
     }
     return render(request, '<app_name>/index.html', context)
 ```
@@ -344,7 +344,7 @@ def delete(request, id):
 카드 양식에 있던 파란 go 버튼을 삭제버튼으로 변경 및 기능 설정
 
 ```html
-<a href="/<app_name>/delete/{{.id}}/" class="btn btn-dnager">Delete</a>
+<a href="/<app_name>/delete/{{.id}}/" class="btn btn-danger">Delete</a>
 ```
 
 
